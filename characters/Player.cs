@@ -30,7 +30,7 @@ namespace ElenarRPG
         public int skillStrength = 0; 
         public int skillWisdom = 0;
 
-        private string weaponEquiped = //Fists but want blank first ;
+        private string weaponEquiped;//Fists but want blank first ;
 
     }
     

@@ -1,0 +1,14 @@
+/home/shini/Documents/Elenar RPG project/bin/Debug/net8.0/Elenar RPG project
+/home/shini/Documents/Elenar RPG project/bin/Debug/net8.0/Elenar RPG project.deps.json
+/home/shini/Documents/Elenar RPG project/bin/Debug/net8.0/Elenar RPG project.runtimeconfig.json
+/home/shini/Documents/Elenar RPG project/bin/Debug/net8.0/Elenar RPG project.dll
+/home/shini/Documents/Elenar RPG project/bin/Debug/net8.0/Elenar RPG project.pdb
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.GeneratedMSBuildEditorConfig.editorconfig
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.AssemblyInfoInputs.cache
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.AssemblyInfo.cs
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.csproj.CoreCompileInputs.cache
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.dll
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/refint/Elenar RPG project.dll
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.pdb
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/Elenar RPG project.genruntimeconfig.cache
+/home/shini/Documents/Elenar RPG project/obj/Debug/net8.0/ref/Elenar RPG project.dll

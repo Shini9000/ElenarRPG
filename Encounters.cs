@@ -56,7 +56,8 @@ namespace ElenarRPG
                     Console.WriteLine("You attack!" + n + " strikes you in retaliation!");
                     int damage = p - Program.pC.armorClass;
                     // weaponary class link
-                    int attack = numberGen.Next(0, Program.pC.weaponDamage) + Program.pC.skillStrength;
+                    //int attack = numberGen.Next(0, Program.pC.weaponDamage) + Program.pC.skillStrength;
+                    int attack = numberGen.Next(0, 2) + Program.pC.skillStrength;
                     Console.WriteLine("You deal " + attack + " points of damage");
                     Console.WriteLine("You were attacked taking " + damage + " points of damage!");
 

@@ -2,7 +2,7 @@ namespace ElenarRPG
 {
     class Weaponary
     {
-        static Random numberGen = new Random();
+     /*   static Random numberGen = new Random();
 
         public int damage;
         // fists weapon
@@ -10,6 +10,6 @@ namespace ElenarRPG
         {
             // damage random 
             damage = numberGen.Next(0,1);
-        }
+        } */
     }
 }
