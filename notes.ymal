@@ -1,0 +1,37 @@
+PlayableRaces:
+  Common:
+    Orc:
+      - Orc
+      - Halforc
+        - Human x Orc
+    Elf:
+      - Halfelf
+        - Human x Elf
+      - Woodelf
+      - Swampelf
+        - Typically Drow (Darkelf)
+      - Hillelf
+        - Typically Highelf or Lightelf
+    Human:
+      - Human
+      - Halforc
+        - Human x Orc
+      - Halfelf
+        - Human x Elf
+      - Halfdwarf
+        - Human x Dwarf
+    Dwarf:
+      - Dwarf
+      - Hilldwarf
+      - Forestdwarf
+      - Citydwarf
+      - Halfdwarf
+        - Human x Dwarf
+  Uncommon:
+    Lizardfolk:
+    Tiefling:
+    Beastfolk:
+    Halfling:
+  Rare:
+    Dragonborn:
+    Serpentfolk:
