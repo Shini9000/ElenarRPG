@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection.Metadata;
@@ -12,15 +13,23 @@ namespace ElenarRPG
         public static bool characterCreated = false;
         private static string[] c_Races = {"Orc", "Elf", "Human", "Dwarf"};
         private static string[] c_Classes = {"Warrior", "Hunter", "Thief", "Mage"};
-
+        private static List<Weaponary> weapons = new List<Weaponary>();
+        private static Weapons weaponsList = new Weapons();
         static void Main(string[] args)
         {
             Start();
+            Console.WriteLine("The rat dropped a knife! Wonder where it stored that...");
+            pC.SwitchWeapon(weapons[1]);
+            Console.WriteLine("Current Weapon: " + pC.weaponEquiped.weaponName);
         }
-
+        
         static void Start()
-        {   
-            Console.Title = "Alisa RPG";
+        {
+            //All game weapons!
+            for(int x = 0; x < weaponsList.weaponNames.Length -1; x++){
+                weapons.Add(new Weaponary(weaponsList.weaponBaseStr[x], weaponsList.weaponNames[x]));
+            }
+            Console.Title = "Elenar RPG";
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("Welcome to Alisa Text RPG!");
@@ -54,6 +63,7 @@ namespace ElenarRPG
                         + "\nSpell Slots: " +  pC.spellSlots 
                         + "\nHealth Potions: " +  pC.healthPotions 
                         + "\nBag: " +  pC.bagSpace
+                        + "\nWeaponEquipped: " +  pC.weaponEquiped.weaponName 
                         + "\n-----------------");
             Console.WriteLine("\n----- Stats -----"
                         + "\nAcrobatics: " + pC.skillAcrobatics 
@@ -237,8 +247,10 @@ namespace ElenarRPG
 
             }
             
-            
-            
+            pC.SwitchWeapon(weapons[0]);   //weapons[0] = fists.
+
+            Console.WriteLine("CURRENT WEAPON EQUIPPED: " + pC.weaponEquiped.weaponName);
+
 
             System.Threading.Thread.Sleep(1500);
             Console.WriteLine("Character created!");

@@ -1,3 +1,5 @@
+using ElenarRPG;
+
 namespace ElenarRPG
 {
     class Player
@@ -8,6 +10,8 @@ namespace ElenarRPG
         public string race;
         public string profession;
         public string diety;
+
+//Ill change back but for example: 
 
         // Inventory 
         public int gold = 0;
@@ -30,8 +34,13 @@ namespace ElenarRPG
         public int skillStrength = 0; 
         public int skillWisdom = 0;
 
-        private string weaponEquiped;//Fists but want blank first ;
+        public Weaponary weaponEquiped{get; private set;}
+
+        public void SwitchWeapon(Weaponary weapon){
+            this.weaponEquiped = weapon;
+        }
 
     }
     
 }
+

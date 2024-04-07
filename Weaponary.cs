@@ -2,14 +2,18 @@ namespace ElenarRPG
 {
     class Weaponary
     {
-     /*   static Random numberGen = new Random();
+       static Random numberGen = new Random();
 
-        public int damage;
-        // fists weapon
-        public Fists(int damage)
-        {
-            // damage random 
-            damage = numberGen.Next(0,1);
-        } */
+        private int baseDamage;
+        public string weaponName {get; private set;}
+
+        public Weaponary(int baseDamage, string weaponName){
+            this.baseDamage = baseDamage;
+            this.weaponName = weaponName;
+        }
+
+        public int AttackDamage(){
+            return baseDamage * numberGen.Next(0, 3);
+        }
     }
 }
