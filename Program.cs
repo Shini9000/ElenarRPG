@@ -32,6 +32,7 @@ namespace ElenarRPG
                 CharacterCreation();
             }
 
+            // Writes the player profile after creation to show stats
             Console.Write("---- Profile ----"
                         + "\nPlayername: " + pC.name 
                         + "\nRace: " + pC.race 
@@ -59,23 +60,24 @@ namespace ElenarRPG
                 // if input name is blank then run CC again
                 CharacterCreation();
             }
-
+            // clear console and pick a race
             Console.Clear();
             Array.Sort(c_Races);
             Console.WriteLine("Now pick a race!");
-            while (pC.race is null) 
+            while (pC.race is null) // if race is ""
             {
-                
+                // will list all in c_Races as 1. 2. 3. ...
                 for (int i = 0; i < c_Races.Length; i++) 
                 {
                     int number = i + 1;
                     Console.WriteLine(number + ". " + c_Races[i]);
                     continue;
                 }
-
+                // inputs for race
                 var s_Race = Console.ReadLine();
                 if (s_Race.Length == 1)
                 {
+                    // checks for user input as "1" or "2"..
                     int selected_race = Convert.ToInt16(s_Race);
                     Debug.WriteLine("Chosen Int");
                     switch (selected_race)
@@ -101,8 +103,8 @@ namespace ElenarRPG
                             break;
                     }
                 } else {
-
-                    s_Race = char.ToUpper(s_Race[0]) + s_Race.Substring(1);
+                    // checks for user input as "elf" or "orc"...
+                    s_Race = char.ToUpper(s_Race[0]) + s_Race.Substring(1); // basically formats to a cap "elf" >> "Elf"
                     Debug.WriteLine("Chosen String " + s_Race);
                     switch (s_Race)
                     {
@@ -129,21 +131,21 @@ namespace ElenarRPG
                 }
 
             }
-
+            // clear console and pick a profession
             System.Threading.Thread.Sleep(1500);
             Console.Clear();
             Array.Sort(c_Classes);
             Console.WriteLine("Now pick a class!");
             while (pC.profession is null) 
             {
-                
+                // will list all in c_Races as 1. 2. 3. ...
                 for (int i = 0; i < c_Classes.Length; i++) 
                 {
                     int number = i + 1;
                     Console.WriteLine(number + ". " + c_Classes[i]);
                     continue;
                 }
-
+                // inputs for class
                 var s_classes = Console.ReadLine();
                 if (s_classes.Length == 1)
                 {
@@ -200,6 +202,7 @@ namespace ElenarRPG
                 }
 
             }
+            
             
             
 
