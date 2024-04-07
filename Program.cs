@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection.Metadata;
 using System.Timers;
 
@@ -24,7 +25,14 @@ namespace ElenarRPG
 
             Console.WriteLine("Welcome to Alisa Text RPG!");
             Console.WriteLine("This is all done in C# and by Text");
+            Console.WriteLine("This project is a pet project of mine");
+            Console.WriteLine("It's available at Itchio and GitHub");
+            Console.WriteLine("Feedback and Bugreports are welcome! Please see below!");
+            Console.WriteLine("Discord: (link unavailbe)");
+            Console.WriteLine("Github: \n\n");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Press any key to continue...");
+            Console.ResetColor();
             Console.ReadKey();
             // check to see if characer is created
             if (characterCreated == false){
@@ -33,6 +41,7 @@ namespace ElenarRPG
             }
 
             // Writes the player profile after creation to show stats
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write("---- Profile ----"
                         + "\nPlayername: " + pC.name 
                         + "\nRace: " + pC.race 
@@ -42,9 +51,34 @@ namespace ElenarRPG
                         + "\nHealth: " +  pC.health 
                         + "\nEXP: " +  pC.experience 
                         + "\nAC: " +  pC.armorClass 
-                        + "\nSpellSlots: " +  pC.spellSlots 
+                        + "\nSpell Slots: " +  pC.spellSlots 
+                        + "\nHealth Potions: " +  pC.healthPotions 
                         + "\nBag: " +  pC.bagSpace
                         + "\n-----------------");
+            Console.WriteLine("\n----- Stats -----"
+                        + "\nAcrobatics: " + pC.skillAcrobatics 
+                        + "\nAgility: " + pC.skillAgility 
+                        + "\nCharisma: " + pC.skillCharisma
+                        + "\nDexterity: " + pC.skillDexterity
+                        + "\nIntelligence: " + pC.skillIntelligence 
+                        + "\nPerception: " +  pC.skillPerception 
+                        + "\nStrength: " +  pC.skillStrength 
+                        + "\nWisdom: " +  pC.skillWisdom
+                        + "\n---- Profile ----");
+
+            System.Threading.Thread.Sleep(3000);
+            Console.Write("Press any key to continue...");
+            Console.ReadKey();
+            Console.Clear();
+
+            // Start story!
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write("It's dark but not light either it smells... odd. ");
+            Console.Write("There is a shadow of sorts a little ways away it's making ");
+            Console.Write("that sound again... a high pitched squeeking noise... almost like a...");
+            Encounters.FirstEncounter();
+
         }
 
         static void CharacterCreation() // CC make character
